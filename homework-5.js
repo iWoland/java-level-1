@@ -31,12 +31,16 @@ toHEX (100,254,50);
 var e, massiv = {};
 
 function transform(e){
-
+	if (e <= 999)
+	{
 	e = e + '';
 	massiv['сотни'] = e.substr(0,1);
 	massiv['десятки'] = e.substr(1,1);
 	massiv['единицы'] = e.substr(2,2);
-
+	}
+	else {
+	console.log('Число более 999');
+	}
 return massiv;
 }
 transform(123);
