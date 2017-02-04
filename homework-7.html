@@ -1,0 +1,41 @@
+
+<html>
+ <head>
+ <title>js-7</title>
+ <style type="text/css">
+#board{
+    width:400px;
+}
+.white, .black{
+    width:50px;
+    height:50px;
+    float:left;
+    padding:0px;
+    margin:0px;
+}
+.white{
+    background:white;
+}
+.black{
+    background:black;
+}
+</style> 
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script type="text/javascript">
+function addBoard(){
+   for (var i = 0; i < 8; i++) {
+        for (var j = 0; j < 8; j++) {
+            if ((i%2==0 && j%2==0)|| (i%2!=0 && j%2!=0)){
+                $("#board").append('<div class="white"></div>');
+            }
+            else $("#board").append('<div class="black"></div>');
+        }
+    }
+}
+ </script>
+ </head>
+ <body>
+ <input type="button" value="CHEESBOARD" onclick="addBoard();">
+ <div id="board"></div>
+ </body>
+ </html>
